@@ -1,0 +1,86 @@
+<ion-header class="ion-padding">
+  <div class="flex flex-row">
+    <div class="basis-1/4">
+      <ion-text>
+        <h1>¡Hola</h1>
+      </ion-text>
+      <ion-text>
+        <h2>de nuevo!</h2>
+      </ion-text>
+    </div>
+    <div class="basis-1/4">
+      <ion-text>
+        <h3>imagen</h3>
+      </ion-text>
+    </div>  
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <section>
+    <ion-text>
+      <h1>Iniciar Sesión</h1>
+    </ion-text>
+    <ion-text>
+      <p>Inicia sesión con tu correo electrónico y contraseña de Topmai para usar tu cuenta de vendedor</p>
+    </ion-text>
+    <form>
+      <ion-item>
+        <ion-input
+          
+          labelPlacement="stacked"
+          placeholder="Correo electrónico"
+        ></ion-input>
+      </ion-item>
+      <br />
+      <ion-item>
+        <ion-input
+          
+          labelPlacement="stacked"
+          placeholder="Contraseña"
+          type="password"
+        ></ion-input>
+      </ion-item>
+    </form>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block">
+          Iniciar Sesión
+        </ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="block">
+          <ion-button expand="full" (click)="accionBoton1($event)" color="light">
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+            Google
+          </ion-button>
+          <ion-button expand="full" (click)="accionBoton2($event)">
+            <ion-icon name="logo-facebook"></ion-icon>
+            Facebook
+          </ion-button>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </section>
+
+  <section class="ion-align-items-center ion-text-center">
+    <ion-text>
+      <p>
+        <ion-text><b>¿No tienes cuenta?</b> </ion-text>
+        -
+        <ion-text routerLink="/register"><b>Regístrate</b> </ion-text>
+      </p>
+    </ion-text>
+  </section>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="toggleFab()">
+      <ion-icon name="help-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <div class="bg-gray-800 text-white py-2 px-4 rounded pr-4">Soporte</div>
+      <div class="bg-gray-800 text-white py-2 px-4 rounded pr-4">Recuperar</div>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
